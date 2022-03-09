@@ -1,6 +1,6 @@
 # Kan's dogs
 
-deployed to Heroku: (https://kans-dogs.herokuapp.com/)[https://kans-dogs.herokuapp.com/ ]
+deployed to Heroku: https://kans-dogs.herokuapp.com/
 
 ## Install depencies
 
