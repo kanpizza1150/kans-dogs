@@ -26,11 +26,14 @@ const Dog: FC<Props> = ({ name }: Props) => {
       image: tokenImg,
     },
   }
-
+  const redirectToLine = () => {
+    window.open(`https://line.me/ti/p/~kanpizza`)
+  }
   return (
     <div>
       {i18n[name]}
       <img src={renderData[name].image} alt={name} />
+      <button onClick={() => redirectToLine()}>Line</button>
       <Map />
     </div>
   )
