@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import deedo from './images/deedo.png'
+import deedo from './images/deedo.webp'
 const App: FC = () => {
   return (
     <div>
