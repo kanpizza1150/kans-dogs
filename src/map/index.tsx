@@ -2,19 +2,17 @@ import React from 'react'
 import GoogleMapReact from 'google-map-react'
 const location = {
   address: 'บ้านอยู่นี้ฮะ',
-  lat: 14.338179856140703,
-  lng: 99.59958754000367,
+  lat: parseFloat(process.env.REACT_APP_LOCATION_LAT || '0'),
+  lng: parseFloat(process.env.REACT_APP_LOCATION_LNG || '0'),
 }
 const LocationPin = ({ text }: any) => {
   const showInMapClicked = () => {
-    window.open(`https://maps.google.com?q=${location.lat},${location.lng}`)
+    window.open(process.env.REACT_APP_LOCATION_URL)
   }
   return <div onClick={() => showInMapClicked()}>{text}</div>
 }
 const Map = () => {
-  //   const navigate = useNavigate()
-
-  const API_KEY = 'AIzaSyCnZebrP0hpsYdah1rimad95cc_zB24xzc'
+  const API_KEY = process.env.REACT_APP_GOOGLE_MAP_API_KEY
   return (
     <div style={{ height: '50vh', width: '100%' }}>
       <GoogleMapReact

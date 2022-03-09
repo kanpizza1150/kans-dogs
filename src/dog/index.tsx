@@ -27,7 +27,7 @@ const Dog: FC<Props> = ({ name }: Props) => {
     },
   }
   const redirectToLine = () => {
-    window.open(`https://line.me/ti/p/~kanpizza`)
+    window.open(process.env.REACT_APP_LINE_URL)
   }
   return (
     <div>
